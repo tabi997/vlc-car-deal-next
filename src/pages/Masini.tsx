@@ -73,14 +73,14 @@ const Masini = () => {
                   <div className="space-y-2">
                     <Label htmlFor="filter-make">Marca</Label>
                     <Select 
-                      value={filters.make || ""} 
-                      onValueChange={(value) => handleFilterChange("make", value)}
+                      value={filters.make || "all"} 
+                      onValueChange={(value) => handleFilterChange("make", value === "all" ? undefined : value)}
                     >
                       <SelectTrigger id="filter-make">
                         <SelectValue placeholder="Toate mărcile" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">Toate mărcile</SelectItem>
+                        <SelectItem value="all">Toate mărcile</SelectItem>
                         <SelectItem value="BMW">BMW</SelectItem>
                         <SelectItem value="Mercedes-Benz">Mercedes-Benz</SelectItem>
                         <SelectItem value="Audi">Audi</SelectItem>
@@ -133,14 +133,14 @@ const Masini = () => {
                   <div className="space-y-2">
                     <Label htmlFor="filter-fuel">Combustibil</Label>
                     <Select 
-                      value={filters.fuelType || ""} 
-                      onValueChange={(value) => handleFilterChange("fuelType", value)}
+                      value={filters.fuelType || "all"} 
+                      onValueChange={(value) => handleFilterChange("fuelType", value === "all" ? undefined : value)}
                     >
                       <SelectTrigger id="filter-fuel">
                         <SelectValue placeholder="Toate" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">Toate</SelectItem>
+                        <SelectItem value="all">Toate</SelectItem>
                         <SelectItem value="Benzină">Benzină</SelectItem>
                         <SelectItem value="Diesel">Diesel</SelectItem>
                         <SelectItem value="Hibrid">Hibrid</SelectItem>
@@ -152,14 +152,14 @@ const Masini = () => {
                   <div className="space-y-2">
                     <Label htmlFor="filter-transmission">Transmisie</Label>
                     <Select 
-                      value={filters.transmission || ""} 
-                      onValueChange={(value) => handleFilterChange("transmission", value)}
+                      value={filters.transmission || "all"} 
+                      onValueChange={(value) => handleFilterChange("transmission", value === "all" ? undefined : value)}
                     >
                       <SelectTrigger id="filter-transmission">
                         <SelectValue placeholder="Toate" />
                       </SelectTrigger>
                       <SelectContent>
-                        <SelectItem value="">Toate</SelectItem>
+                        <SelectItem value="all">Toate</SelectItem>
                         <SelectItem value="Manuală">Manuală</SelectItem>
                         <SelectItem value="Automată">Automată</SelectItem>
                       </SelectContent>
